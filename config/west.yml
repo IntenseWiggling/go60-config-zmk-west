@@ -2,10 +2,15 @@ manifest:
   remotes:
     - name: moergo-sc
       url-base: https://github.com/moergo-sc
+    - name: minhe7735
+      url-base: https://github.com/minhe7735
   projects:
     - name: zmk
       remote: moergo-sc
       revision: main
       import: app/west.yml
+    - name: zmk-trackball-gestures-module
+      remote: minhe7735
+      revision: master
   self:
     path: config

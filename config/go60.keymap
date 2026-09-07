@@ -30,6 +30,9 @@
 #include <dt-bindings/zmk/pointing.h>
 #include <input/processors.dtsi>
 
+/* Gestures include */
+#include <dt-bindings/zmk/trackball_gestures.h>
+
 /* Helper Macros, based on https://github.com/urob/zmk-helpers/ */
 
 #pragma once
@@ -191,7 +194,7 @@
 };
 
 &cirque_lh_listener {
-    input-processors = <&zip_xy_scaler 11 12>, <&zip_xy_transform INPUT_TRANSFORM_Y_INVERT>, <&zip_xy_to_scroll_mapper>, <&zip_click_to_right_click_mapper>;
+    input-processors = <&gesture_processor>, <&zip_xy_scaler 11 12>, <&zip_xy_transform INPUT_TRANSFORM_Y_INVERT>, <&zip_xy_to_scroll_mapper>, <&zip_click_to_right_click_mapper>;
     layer_Factory {
         layers = <LAYER_Factory>;
         input-processors = <&zip_xy_scaler 3 1>;
@@ -382,7 +385,7 @@
             bindings = <
             &kp EQUAL  &kp N1     &kp N2   &kp N3    &kp N4  &kp N5                                                                                &kp N6    &kp N7     &kp N8    &kp N9    &kp N0         &kp MINUS
               &kp TAB   &kp Q      &kp W    &kp E     &kp R   &kp T                                                                                 &kp Y     &kp U      &kp I     &kp O     &kp P          &kp BSLH
-              &kp ESC   &kp A      &kp S    &kp D     &kp F   &kp G                                                                                 &kp H     &kp J      &kp K     &kp L  &kp SEMI           &kp SQT
+              &kp ESC   &kp A      &kp S    &kp D     &kp F   &kp G                                                                                 &kp H     &kp J      &kp K     &kp L  &kp SEMI           &mt GESTURE_SWIPE3 SQT
  &magic LAYER_Magic 0   &kp Z      &kp X    &kp C     &kp V   &kp B                                                                                 &kp N     &kp M  &kp COMMA   &kp DOT  &kp FSLH  &td_LAYER_Keypad
                                &kp GRAVE  &kp DEL  &kp BSPC                                                                                                &kp LGUI   &kp LBKT  &kp RBKT
                                                                      &td_LAYER_SymbolNav  &kp LSHFT  &kp LCTRL  &kp LALT  &kp SPACE  &mt RALT RET
