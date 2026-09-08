@@ -385,7 +385,7 @@
               &kp ESC   &kp A      &kp S    &kp D     &kp F   &kp G                                                                                 &kp H     &kp J      &kp K     &kp L  &kp SEMI           &kp SQT
  &magic LAYER_Magic 0   &kp Z      &kp X    &kp C     &kp V   &kp B                                                                                 &kp N     &kp M  &kp COMMA   &kp DOT  &kp FSLH  &td_LAYER_Keypad
                                &kp GRAVE  &kp DEL  &kp BSPC                                                                                                &kp LGUI   &kp LBKT  &kp RBKT
-                                                                     &td_LAYER_SymbolNav  &kp LSHFT  &kp LCTRL  &kp LALT  &kp SPACE  &mt RALT RET
+                                                                     &td_LAYER_SymbolNav  &sk LSHFT  &kp LCTRL  &kp LALT  &kp SPACE  &mt RALT RET
             >;
         };
 
